@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>Air Quality</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <script src="gauge.min.js"></script> -->
+    <script src="//cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <h1>OBD2 Interface</h1>
+    </div>
+	<div class="container">
+		<div class="card-grid">
+			<div class="card">
+			<p class="card-title">Speed</p>
+			<canvas id="gauge-speed"></canvas>
+			</div>
+			<div class="card">
+			<p class="card-title">RPM</p>
+			<canvas id="gauge-rpm"></canvas>
+			</div>
+			<div class="card">
+				<p class="card-title">Temperature</p>
+				<canvas id="gauge-temperature"></canvas>
+				</div>
+		</div>
+
+		<div class="card-grid">
+			<div class="card">
+				<div class="relay">
+					<p id ="sys_status">Connection status</p>
+					<div class="ConnectionIndicator ConnectionIndicator--default" id="sys-status">
+						<div class="Status">
+							<div class="Status__circle_big Status__circle--static"></div>
+							<div class="Status__circle_big Status__circle--animated Status__circle--pulseBig"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script src="script.js"></script>
+  </body>
+</html>
